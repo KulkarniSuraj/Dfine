@@ -15,13 +15,7 @@ body {
     display: none !important;
 }
 
-.message {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: 600;
-    margin-top: 24px;
-}
+
 
 .disputed {
     color: #ef4444;
@@ -58,59 +52,6 @@ section {
 
 /* ELEMENTS */
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.logo img {
-    width: 68px;
-    height: 68px;
-}
-
-h1 {
-    font-size: 42px;
-    text-transform: uppercase;
-    font-family: "Coiny", sans-serif;
-    line-height: 1;
-    margin-top: 6px;
-}
-
-
-
-.fact {
-    font-size: 20px;
-    line-height: 1.4;
-    background-color: #44403c;
-    margin-bottom: 16px;
-    padding: 16px 24px;
-    letter-spacing: -1px;
-    border-radius: 16px;
-
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-@media (max-width: 1200px) {
-    .fact {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 12px;
-    }
-}
-
-.tag {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-family: "Coiny", sans-serif;
-    padding-top: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 100px;
-}
-
 .vote-buttons {
     margin-left: auto;
     flex-shrink: 0;
@@ -144,24 +85,14 @@ ul {
     list-style: none;
 }
 
-.source:link,
-.source:visited {
-    color: #a8a29e;
-    text-decoration: none;
-    margin-left: 12px;
-    transition: 0.3s;
-}
 
-.source:hover,
-.source:active {
-    color: #3b82f6;
-}
 
 .btn {
     border: none;
     font-family: "monospace", sans-serif;
     line-height: 1;
     text-transform: uppercase;
+    font-weight: 950;
     font-size: 17px;
     padding: 16px 0 13px;
     background-image: linear-gradient(
@@ -185,8 +116,6 @@ ul {
     font-size: 20px;
     padding: 20px 32px 17px;
 }
-
-
 
 /* FORM */
 .fact-form {

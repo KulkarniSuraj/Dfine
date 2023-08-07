@@ -1,10 +1,7 @@
 import "./CategoryFilter.css";
+import { CATEGORIES } from "../categories.js"
 const CategoryFilter = ({ setCurrentCategory }) => {
-    const CATEGORIES = [
-        { name: "ITIL", color: "#3b82f6" },
-        { name: "Infra", color: "#16a34a" },
-        { name: "Tech", color: "#ef4444" },
-    ];
+
     return (
         <aside>
             <ul className="category">
