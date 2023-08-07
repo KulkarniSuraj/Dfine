@@ -1,0 +1,13 @@
+.btn-all-categories {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.btn-category {
+    width: 100%;
+    background-image: none;
+}
+
+.category {
+    margin-bottom: 16px;
+}
