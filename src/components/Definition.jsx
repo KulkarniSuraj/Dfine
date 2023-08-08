@@ -3,11 +3,11 @@ import "./Definition.css"
 
 function Definition({ definition }) {
     return (
-        <li key={definition.id}>
+        <li key={definition.id} className="definition">
             <p>
                 {definition.text}
                 <a className="source" href={definition.source} target="_blank">
-                    (Source 🔗)
+                    (Source)
                 </a>
             </p>
             <span

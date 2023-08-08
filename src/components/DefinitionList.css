@@ -5,3 +5,8 @@
     font-weight: 600;
     margin-top: 24px;
 }
+
+section {
+    overflow: hidden;
+    padding-bottom: 40px;
+}
