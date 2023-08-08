@@ -7,20 +7,12 @@
 body {
     background-color: #292524;
     color: #fafaf9;
-    font-family: "Sono", sans-serif;
+    font-family: monospace;
     padding: 48px 64px 0px;
 }
 
 .hidden {
     display: none !important;
-}
-
-
-
-.disputed {
-    color: #ef4444;
-    font-weight: 600;
-    margin-right: 10px;
 }
 
 /* MAIN LAYOUT */
@@ -40,14 +32,8 @@ body {
 @media (max-width: 900px) {
     .main {
         grid-template-columns: 1fr;
-        /* Fixed in a video text overlay, to fix scrolling issue on small screens */
         height: auto;
     }
-}
-
-section {
-    overflow: scroll;
-    padding-bottom: 40px;
 }
 
 /* ELEMENTS */
@@ -84,8 +70,6 @@ section {
 ul {
     list-style: none;
 }
-
-
 
 .btn {
     border: none;
