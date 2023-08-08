@@ -5,7 +5,7 @@ function Definition({ definition }) {
     return (
         <li key={definition.id} className="definition">
             <p>
-                {definition.text}
+                {definition.description}
                 <a className="source" href={definition.source} target="_blank">
                     (Source)
                 </a>
@@ -14,7 +14,7 @@ function Definition({ definition }) {
                 className="tag"
                 style={{
                     backgroundColor: CATEGORIES.find(
-                        (cat) => cat.name === definition.category
+                        (cat) => cat.name.toLowerCase() === definition.category.toLowerCase()
                     ).color,
                 }}
             >
