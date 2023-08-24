@@ -1,6 +1,6 @@
 import "./CategoryFilter.css";
 import { CATEGORIES } from "../categories.js"
-const CategoryFilter = ({ setCurrentCategory }) => {
+const CategoryFilter = ({ handleCategory }) => {
 
     return (
         <aside>
@@ -8,7 +8,7 @@ const CategoryFilter = ({ setCurrentCategory }) => {
                 <li key={"all"}>
                     <button
                         className="btn btn-all-categories"
-                        onClick={() => setCurrentCategory("all")}
+                        onClick={() => handleCategory("all")}
                     >
                         All
                     </button>
@@ -17,7 +17,8 @@ const CategoryFilter = ({ setCurrentCategory }) => {
                     <li key={category.name} className="category">
                         <button
                             className="btn btn-category"
-                            onClick={() => setCurrentCategory(category.name)}
+                            onClick={() => {handleCategory(category.name.toLowerCase());
+                            console.log(category.name.toLowerCase())}}
                             style={{ backgroundColor: category.color }}
                         >
                             {category.name}

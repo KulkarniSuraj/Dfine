@@ -7,16 +7,18 @@ import DefinitionList from "./components/DefinitionList";
 
 function App() {
     const [definitions, setDefinitions] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
     const [currentCategory, setCurrentCategory] = useState("all");
 
     useEffect(() => {
         async function getDefinitions() {
-            let { data: Definition, error } = await supabase
-                .from("Definition")
-                .select();
-                setDefinitions(Definition);
-                
+            let query = supabase.from("Definition").select("*");
+            if (currentCategory.toLowerCase() !== "all") {
+                query = query.eq("category", currentCategory.toLowerCase());
+            }
+
+            let { data: Definition, error } = await query;
+            if (!error) setDefinitions(Definition);
+            else alert("Something went wrong");
         }
         getDefinitions();
     }, []);
@@ -26,7 +28,7 @@ function App() {
             <Header />
             <main className="main">
                 <CategoryFilter
-                    setCurrentCategory={setCurrentCategory}
+                    handleCategory={setCurrentCategory}
                 ></CategoryFilter>
                 <DefinitionList definitions={definitions}></DefinitionList>
             </main>
