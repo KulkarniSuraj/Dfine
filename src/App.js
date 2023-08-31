@@ -21,7 +21,7 @@ function App() {
             else alert("Something went wrong");
         }
         getDefinitions();
-    }, []);
+    }, [currentCategory]);
 
     return (
         <>
@@ -35,7 +35,4 @@ function App() {
         </>
     );
 }
-const Loader = () => {
-    return <p className="message">Loading...</p>;
-};
 export default App;
