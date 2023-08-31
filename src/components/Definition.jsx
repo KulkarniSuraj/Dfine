@@ -6,7 +6,7 @@ function Definition({ definition }) {
         <li key={definition.id} className="definition">
             <p>
                 {definition.description}
-                <a className="source" href={definition.source} target="_blank">
+                <a className="source" href={definition.source} target="_blank" rel="noreferrer">
                     (Source)
                 </a>
             </p>
