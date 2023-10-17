@@ -103,9 +103,9 @@ ul {
 
 /* FORM */
 .fact-form {
-    background-color: #44403c;
+    /* background-color: #44403c;
     margin-bottom: 40px;
-    padding: 16px 32px;
+    padding: 16px 32px; */
     display: flex;
     align-items: center;
     gap: 16px;
@@ -114,7 +114,7 @@ ul {
 
 .fact-form input,
 .fact-form select {
-    width: 220px;
+    width: 320px;
     background-color: #78716c;
     border: none;
     border-radius: 100px;
@@ -132,7 +132,7 @@ ul {
     flex-grow: 1;
 }
 
-.fact-form span {
+.fact-form label {
     font-weight: 600;
     font-size: 18px;
     margin-right: 18px;
