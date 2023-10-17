@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import supabase from "./supabase";
 import "./App.css";
 import Header from "./components/Header";
@@ -23,13 +23,20 @@ function App() {
     getDefinitions();
   }, [currentCategory]);
 
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <>
-      <Header />
+      <Header searchKey={searchQuery} handleSearchInput={setSearchQuery} />
+
       <main className="main">
         <CategoryFilter handleCategory={setCurrentCategory}></CategoryFilter>
 
-        <DefinitionList definitions={definitions}></DefinitionList>
+        <DefinitionList
+          definitions={definitions.filter((d) =>
+            d.description.toLowerCase().includes(searchQuery.toLowerCase())
+          )}
+        ></DefinitionList>
       </main>
     </>
   );
