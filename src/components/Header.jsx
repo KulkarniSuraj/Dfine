@@ -1,11 +1,15 @@
-import "./Header.css"
+import "./Header.css";
 
-const Header = () => {
-    return (
-        <header className="header">
-            <h1>Dfine</h1>
-        </header>
-    );
-}
+const Header = ({ handleSearchInput }) => {
+  return (
+    <header className="header">
+      <h1>Dfine</h1>
+      <form className="fact-form">
+        <label htmlFor="search">Search</label>
+        <input type="text" id="search" onChange={e => handleSearchInput(e.target.value)}/>
+      </form>
+    </header>
+  );
+};
 
 export default Header;
