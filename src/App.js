@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import supabase from "./supabase";
 import "./App.css";
 import Header from "./components/Header";
