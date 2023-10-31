@@ -18,7 +18,7 @@ function App() {
 
       let { data: Definition, error } = await query;
       if (!error) setDefinitions(Definition);
-      else alert("Something went wrong");
+      else alert("Something went wrong! Please contact the administrator.");
     }
     getDefinitions();
   }, [currentCategory]);
